@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 0.85rem;
+}
+
+button, button:visited {
+    background-color: #0F0;
+    color: #000;
+    border: 0;
+    padding: 5px 5px;
+    border-radius: 3px;
+    transform: scale(1);
+    transition: 200ms ease-out;
+}
+
+button:hover {
+    background-color: #FFF;
+    color: #000;
+    border: 0;
+    padding: 5px 5px;
+    border-radius: 3px;
+    transform: scale(1.1);
+    transition: 200ms ease-out;
+}
+
+button:active {
+    background-color: rgb(149, 0, 255);
+    color: #FFF;
+    border: 0;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr repeat(3, 3fr) 2fr 2fr;
+    grid-template-areas:
+        "charname charname charname"
+        "weapon character character"
+        "armour character character"
+        "item character character"
+        "ability1 ability2 ability3"
+        "hpmp hpmp hpmp" ;
+    border: 1px solid #000;
+    width: 100vw;
+    height: 47vh;
+}
+
+.vs-container {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #F00;
+    color: #FFF;
+    width: 100vw;
+    height: 6vh;
+}
+
+.villain-container {
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 2rem;
+    background-color: #000;
+    color: #0F0;
+    width: 100vw;
+    height: 47vh;
+    border: 1px solid #FFF;
+}
+
+.charname { grid-area: charname; }
+.character { grid-area: character; }
+.weapon { grid-area: weapon; }
+.armour { grid-area: armour; }
+.item { grid-area: item; }
+.hpmp { grid-area: hpmp; }
+.ability1 { grid-area: ability1; }
+.ability2 { grid-area: ability2; }
+.ability3 { grid-area: ability3; }
+
+.global {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #0F0;
+    border: 1px solid #FFF;
+    text-align: center;
+    line-height: 1.15rem;
+}
+
+.gear-title {
+    color: #FFF;
+    font-size: xx-small;
+    margin-bottom: 5px;
+}
+
+#charname-el {
+    font-size: 1rem;
+}
